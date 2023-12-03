@@ -1,0 +1,130 @@
+<%- include("header")%>
+<%- include("nav.ejs")%>
+<link rel="stylesheet" href="./stylesheets/style.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+<div  class="page1 df">
+       
+    <div class="slider-container df">
+        <div class="prev-btn btn df">
+            <i class="ri-arrow-left-s-line"></i>  
+        </div>
+        <div class="next-btn btn df">
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+
+        <div class="slider">
+          <div class="card">
+          <img src="https://images.pexels.com/photos/1419939/pexels-photo-1419939.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                <div class="text-content">
+                  <h1>" COFFEE HEAVEN "</h1>
+                  <h4>" Enjoy Your Happy Moment with Coffee..."</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus vel minima accusantium dolor eveniet, minus distinctio officia dolore odio voluptas earum omnis voluptate corrupti sed praesentium ipsum quos autem fuga!</p>
+                  
+                </div>
+                
+            </div>
+          
+            <div class="card">
+
+                <img src="https://images.pexels.com/photos/682503/pexels-photo-682503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="text-content">
+                  <h1>" COFFEE HEAVEN "</h1>
+                  <h4>" Enjoy Your Happy Moment with Coffee..."</h4>
+                  
+                </div>
+                
+            </div>
+             <div class="card">
+                <img src="https://media.istockphoto.com/id/1367031369/photo/latte-art-on-wooden-table.jpg?s=612x612&w=0&k=20&c=BikVD27kZg_i_rWU84pQJmb_MVdKkbV3-pCTDs8AxnQ="
+                alt="">
+            
+            </div>
+            <div class="card">
+              <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="">
+            </div>
+            <div class="card">
+              <img src="https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="">
+            </div>
+          </div>
+    </div>
+</div>
+    <div id="page2">
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzwF1IyL4TKLLUa0UPXB_DOYgusDcKE8vsZV9vkJpMdSVc0-Ohd1XIlsStIAIBnLbt_II&usqp=CAU" alt="">
+        <h1>Our Hot Product</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed reprehenderit nihil quibusdam voluptates minus <br>deserunt praesentium quos debitis laborum at?</p></div>
+      <div id="image-part">
+        <div id="img">
+        <img src="https://images.pexels.com/photos/1235706/pexels-photo-1235706.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        <div id="text"><h3>Black Coffee</h3></div>
+        </div>
+        <div id="img">
+          <img src="https://images.pexels.com/photos/4264049/pexels-photo-4264049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+          <div id="text"><h3>Cold Coffee</h3></div>
+          </div>
+          <div id="img">
+            <img src="https://images.pexels.com/photos/3216564/pexels-photo-3216564.jpeg?auto=compress&cs=tinysrgb&w=600">
+            <div id="text"><h3>Hot Coffee</h3></div>
+            </div>
+      </div>
+    </div>
+    <div>
+      <hr>
+      <div id="page3">
+           <div id="page3-text">
+            <h5>OUR SKILLS</h5>
+            <h1>We Make the delicious coffee for the coffee lovers </h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quod, reiciendis consequuntur alias autem modi commodi? Hic vero mollitia accusantium similique pariatur maxime iusto distinctio.</p>
+            <button><a href="/order">Order-Now</a></button>
+           </div>
+           <div id="page3-img">
+              <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+           </div>
+      </div>
+    </div>
+    <div id="page4">
+       <h3>Buy a delicious and tasty coffee with us..  <a href="/signin">LogIn</a></h3>
+    </div>
+
+    <%- include("footer")%>
+
+    <script>
+      var prevBtn = document.querySelector('.prev-btn ');
+  var nextBtn = document.querySelector('.next-btn ');
+  var sliderr = document.querySelector('.slider');
+  var cards = document.querySelector('.card');
+  
+  prevBtn.addEventListener('click', function () {
+    
+    var cardkiWidth = cards.clientWidth;
+  
+  
+    
+    sliderr.scrollBy({
+      left: -cardkiWidth,
+      behavior: 'smooth',
+    });
+  });
+  
+  nextBtn.addEventListener('click', function () {
+    
+    var cardkiWidth = cards.clientWidth;
+  
+    
+    console.log(cardkiWidth);
+    
+    sliderr.scrollBy({
+      left: +cardkiWidth,
+      behavior: 'smooth',
+    });
+  });
+  
+  
+  
+        
+  </script>

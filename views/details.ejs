@@ -1,0 +1,35 @@
+<%- include("header.ejs")%>
+<link rel="stylesheet" href="./stylesheets/details.css">
+<h1>👋 <%= admin.username %></h1> <button><a href="/signout">Logout</a>|<a href="/order">BacK</a>|<a href="profile">profile</a></button>
+<h1>Check All The Selected Order Details</h1>
+
+<h2>Total Amount: <%= coffees.reduce((ac,cv) => ac+cv.amount, 0)%></h2></div>
+<!-- <%= JSON.stringify(coffees)%> -->
+
+<table border="1" >
+    <tr>
+        
+        <td><b>Coffee-Name</b></td>
+        <td><b>Amount</b></td>
+        <td><b>Contact</b></td>
+        <td><b>City</b></td>
+        <td><b>Address</b></td>
+        <td><b>Pin-code</b></td>
+        <td><b>Payment-Mode</b></td>
+        <td><b>Update/Delete</b></td>
+    </tr>
+    <% coffees.forEach((elem)=>{ %>
+    <tr>
+        
+        <td><%= elem.coffeename%></td>
+        <td><%= elem.amount%></td>
+        <td><%= elem.contact%></td>
+        <td><%= elem.city%></td>
+        <td><%= elem.address%></td>
+        <td><%= elem.pincode%></td>
+        <td><%= elem.paymentmode%></td>
+        <td><a href="/update/<%= elem._id %>">update</a> / <a href="/delete/<%= elem._id %>">Delete</a></td>
+    </tr>
+    <% }) %> 
+</table>
+<%- include("footer.ejs")%>

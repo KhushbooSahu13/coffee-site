@@ -1,0 +1,28 @@
+<%- include("header")%>
+<link rel="stylesheet" href="./stylesheets/order.css">
+<h1>Buy Your Favourite <span>Coffee</span> ☕☕</h1>
+<div id="container">
+   
+    <form action="/order" method="POST">
+        <h2>Order-Now</h2>
+        <input type="text" name="coffeename" placeholder="Coffee-Name" /><br><br>
+        <input type="number" name="amount" placeholder="Amount" /><br><br>
+        <input type="number" name="contact" placeholder="Number" /><br><br>
+        <input type="text" name="city" placeholder="City" /><br><br>
+        <input type="text" name="address" placeholder="Enter Your Address" /><br><br>
+        <input type="number" name="pincode" placeholder="Enter-Pincode" /><br><br>
+       
+        <select name="paymentmode">
+            
+            <option value="cash">Cash</option>
+            <option value="online">Online</option>
+            <option value="cheque">Card</option>
+        </select><br><br>
+        <button>Done👍</button><br><br>
+       <h4> Check Your Order List...<a href="/details">Click Here</a><br><a href="/profile">Back</a></h4>
+       
+        
+    </form>
+    </div>
+
+<%- include("footer")%>

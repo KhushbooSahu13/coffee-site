@@ -1,0 +1,19 @@
+<%- include("header")%>
+<%- include("nav.ejs")%>
+
+
+
+<link rel="stylesheet" href="./stylesheets/signin.css">
+
+
+<div id="container">
+
+<form action="/signin" method="post">
+    <h1>SignIn</h1>
+   <br><br> <input type="text" placeholder="username" name="username"> <br><br>
+    <input type="password" placeholder="Password" name="password"> <br><br>
+ <button>submit</button>
+ <p>If already have a Account..so plz login</p>
+</form>
+</div>
+<%- include("footer")%>
